@@ -10,4 +10,5 @@
 #
 #
 # print("\nIcombined average is: " + str(average/5))
-print(340 % 50)
+word = "4"
+print(int(word))

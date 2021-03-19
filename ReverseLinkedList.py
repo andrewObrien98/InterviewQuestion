@@ -1,5 +1,5 @@
 """
-Given a singly-linked list, reverse the list. This can be done iteratively or recursively. Can you get both solutions?
+Given a singly-linked list, reverse the list.
 
 Example:
 Input: 4 -> 3 -> 2 -> 1 -> 0 -> NULL
@@ -35,18 +35,7 @@ class ListNode(object):
 
     # Implement this.
 
-    # Recursive Solution
-    def reverse(self, head):
-        self.reverseRecursively(None, head)
 
-    def reverseRecursively(self, previous, current):
-        next = current.next
-        current.next = previous
-        previous = current
-        current = next
-        self.reverseRecursively(previous, current)
-
-# Implement this.
 
 # Test Program
 # Initialize the test list:
@@ -64,11 +53,5 @@ print("Initial list: ")
 testHead.printList()
 # 4 3 2 1 0
 testHead.reverseIteratively(testHead)
-# testHead.reverseRecursively(testHead)
-print("List after reversal: ")
 testTail.printList()
-
-# testHead.reverse(testHead)
-# print("List after reversal: ")
-# testTail.printList()
 # 0 1 2 3 4
