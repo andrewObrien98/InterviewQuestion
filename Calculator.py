@@ -8,41 +8,18 @@ Input: - ( 3 + ( 2 - 1 ) )
 Output: -4
 Here's the function signature:
 """
+class Node:
+    def __init__(self, element):
+        self.right = None
+        self.left = None
+        self.element = element
 def eval(expression):
-    listOfLeftBrackets = []
-    listOfRightBrackets = []
     list = expression.split(" ")
-    for i in range(len(list)):
-        if(list[i] == "("):
-            listOfLeftBrackets.append(i)
-        elif (list[i] == ")"):
-            listOfRightBrackets.append(i)
-    if(len(listOfRightBrackets) != len(listOfLeftBrackets)):
-        return "not pausible"
-    number = 0
-    size = len(listOfLeftBrackets)
-    for i in range(size):
-        startIndex = listOfLeftBrackets[size - i - 1]
-        endIndex = listOfRightBrackets[i]
-        negation = "+"
-        for j in range(startIndex + 1, endIndex):
-            print(list[j])
-            if(list[j] == "-"):
-                negation = "-"
-            elif(list[j] == "-"):
-                negation = "+"
-            elif list[j].isdigit() and negation == "+":
-                number += int(list[j])
-                list[j] = 0
-            elif list[j].isdigit() and negation == "-":
-                number -= int(list[j])
-                list[j] = 0
-        list[startIndex] = 0
-        list[endIndex] = 0
-
-    return number
+    
 
 
+def insert(element):
+    print("hello")
 
   # Fill this in.
 
